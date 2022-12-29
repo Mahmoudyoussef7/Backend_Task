@@ -29,7 +29,7 @@ namespace API.Controllers
             var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize);
             var pagedData = result.Skip((validFilter.PageNumber - 1) * validFilter.PageSize).Take(validFilter.PageSize);
             var totalRecords = result.Count;
-            return Ok(result);
+            return Ok(pagedData);
         }
 
        
