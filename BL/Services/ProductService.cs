@@ -24,7 +24,7 @@ namespace BL.Services
 
         public List<ProductVM> GetByExpression(Expression<Func<Product, bool>> expression)
         {
-            var productList  = _unitOfWork.ProductRepository.GetByExpression(expression).ToList();
+            var productList = _unitOfWork.ProductRepository.GetByExpression(expression).ToList();
             var result = _mapper.Map<List<ProductVM>>(productList);
             return result;
         }

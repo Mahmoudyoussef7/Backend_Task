@@ -1,4 +1,5 @@
 using BL.DTO;
+using BL.Profiler;
 using BL.Services;
 using DAL;
 using DAL.Interfaces;
@@ -38,7 +39,7 @@ namespace Backend_Task
             services.AddScoped<IService<Product, ProductVM>, ProductService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddAutoMapper(typeof(Startup));
+            services.AddAutoMapper(typeof(MappingProfile));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

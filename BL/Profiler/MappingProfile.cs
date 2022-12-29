@@ -13,8 +13,7 @@ namespace BL.Profiler
     {
         public MappingProfile()
         {
-            CreateMap<Product, ProductVM>();
-            //CreateMap<List<ProductVM>, List<Product>>().ReverseMap();
+            CreateMap<Product, ProductVM>().ForMember(des=>des.Description,p=>p.Ignore()).ReverseMap();
         }
     }
 }
