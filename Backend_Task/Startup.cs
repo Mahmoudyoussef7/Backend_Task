@@ -60,6 +60,7 @@ namespace Backend_Task
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors();
 
             app.UseAuthorization();
 
